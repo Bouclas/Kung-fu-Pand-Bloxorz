@@ -1,0 +1,101 @@
+
+<!-- Bacharidis Kostas-2007030079 -->
+
+</script>
+<head>
+<!-- declare and create the canvas and declare its width and height--> 
+ <canvas  style="border: none;" width="500" height="200"></canvas>
+ <center>
+ <!-- upload the image used as background in the page , declare its dimensions --> 
+<IMG SRC="2.jpg" WIDTH=200 HEIGHT=200>
+<body background="1.jpg" >
+ 
+<!-- declare the extra characteristics (like postion,if it will repeat in the page), of the background image using css --> 
+<style type="text/css">
+
+body {
+ background-position:center top;
+	background-repeat: no-repeat;
+background-size: Auto 1200px;
+	}
+</style>
+
+</head>
+
+ <!-- Write the title of the game and create the field in which the player can write its username--> 
+<center> <b>
+<h1>
+<p><font size="14">TUCxorz</font></p>
+</h1>
+<center> <b>
+<p><font size="4">UserName: </font>
+    <tr>
+        <td colspan="3">
+            <textarea id="inputTextToSave" style="width:150px;height:20px"></textarea>
+			  <!-- <td><a href="javascript:saveTextAsFile()">Save</a></td>--> 
+        </td>
+    </tr>
+    <tr>
+       
+       
+     
+    </tr>
+
+ <!-- if we enable the reading of the value written in field and we want to save it in .txt file we uncomment the previous commented line --> 
+ <!-- and using javascript we declare the function saveTextAsFile() which creates a .txt file name user.txt and stores the input value and the in the event of clicking--> 
+ <!-- the Save link which is displayed via the previously uncommented line we will see the user.txt file being downloaded and if we open it we will see the input written inside it--> 
+ <script type='text/javascript'>
+function saveTextAsFile()
+{
+    var textToWrite = document.getElementById("inputTextToSave").value;
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var fileNameToSaveAs = "user.txt";
+
+    var downloadLink = document.createElement("a");
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.click();    
+}wnloadLink.click();    
+
+</script>
+<br>
+ <!-- Create the button play game and attaching to the event of pressing it the link to the page of the first level-->
+ <!-- using css code we declare the characteristics of the button,like colour , position, layout and form of the letters written inside it and etc. -->  
+<a href=".\Bloxzorz_lvl1.htm" class="classname">Play game</a>
+<style type="text/css">
+.classname {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fceaca;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fceaca;
+	box-shadow:inset 0px 1px 0px 0px #fceaca;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffce79), color-stop(1, #eeaf41) );
+	background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+	background-color:#ffce79;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ce8e28;
+}.classname:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeaf41), color-stop(1, #ffce79) );
+	background:-moz-linear-gradient( center top, #eeaf41 5%, #ffce79 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaf41', endColorstr='#ffce79');
+	background-color:#eeaf41;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+
+
+</form>
+</html>
+
